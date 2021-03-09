@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos para introdução à programação - Exemplo 01</title>
+
+ 
+      <style>
+     body{
+        background: black;
+        color: white;
+         }
+       </style>
+</head> 
+
+<body>
+    <h1> Percentual de Desconto </h1>
+    <script>
+
+        let n1 = prompt('Valor total do produto')
+        let n2 = prompt('Desconto Oferecido %')
+
+        let v1 = parseFloat(n1) * parseFloat(n2) / 100
+        let v2 = parseFloat(n1) - parseFloat(v1)
+
+        document.write(`o Desconto aplicado foi de ${n2}%, com isso o produto foi de ${n1} para apenas ${v2}, tendo uma redução de ${v1}reais.`)
+        document.write("<br>")
+        
+      
+      
+
+    </script>
+    
+          
+</body>
+</html>
