@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha de Gênero</title>
+</head>
+<p>Bem-Vindo :D</p>
+<p>Preencha os campos</p>
+ <form id="formulario">
+    <input id="nome1" type="String" placeholder="Seu nome">
+    <input id="genero1" type="number" placeholder="1 - Fem  2 - Masc">
+<button>Concluir</button>
+ </form>
+<div id ="exibir"></div>
+<body>
+<script> 
+ function funcao(event){
+ event.preventDefault()
+
+let nome = nome1.value
+let genero = parseFloat(genero1.value)
+
+  if (genero === 2) {
+    exibir.innerHTML = `Olá, senhor ${nome}`;
+  } 
+
+  else if(genero !==1 && genero !==2){
+    exibir.innerHTML = `Número digitado não está relacionado a um gênero`;
+  }
+  
+  else {
+    exibir.innerHTML = `Olá, senhora ${nome}`;
+  }
+
+}
+formulario.addEventListener('submit', funcao)
+</script>   
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climas</title>
+</head>
+
+<p>Escolha de climas</p>
+<p>1 para Ensolarado ; 2 para Chuvoso ; 3 para Nevoso; 4 para Nublado</p>
+     <form id="formulario">
+        <input id="clima" type="number" placeholder="Selecione o clima de hoje">
+<button>Enviar</button>
+</form>
+     <div id ="exibir"></div>
+<body>
+<script> 
+     function funcao(event){
+      event.preventDefault()
+    let climaex = parseFloat(clima.value)
+    if (climaex === 1) {
+    exibir.innerHTML = 'Hoje está bom e ensolarado lá fora. Use shorts! Vá à praia ou ao parque e tome um sorvete.';
+  } else if (climaex === 2) {
+    exibir.innerHTML = 'A chuva está caindo lá fora; pegue uma capa de chuva e um guarda-chuva, e não fique fora por muito tempo';
+  } else if (climaex === 3) {
+    exibir.innerHTML = 'A neve está caindo - está congelando! Melhor ficar em casa com uma xícara de chocolate quente ou construir um boneco de neve.';
+  } else if (climaex === 4) {
+    exibir.textContent = 'Não está chovendo, mas o céu está cinza e sombrio; pode girar a qualquer minuto, então leve uma capa de chuva para o caso.';
+  } 
+  else if(climaex !==1 && climaex !==2 && climaex !==3 && climaex !==4){
+    exibir.innerHTML = `Clima informado não existe`;
+  }
+  else {
+    para.textContent = '';
+  }
+}
+formulario.addEventListener('submit', funcao)
+</script>
+</body>
+</html>
