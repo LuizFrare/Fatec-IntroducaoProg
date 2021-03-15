@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos para introdução à programação - Exemplo 01</title>
+
+</head> 
+
+<body>
+  <center>
+    <h1> BHASKARA </h1>
+    <p>Calcular o valor de x' e x''</p>
+
+  <form id="form">
+    <input id="field1" type="number" placeholder="Valor de A">
+    <input id="field2" type="number" placeholder="Valor de B">
+    <input id="field3" type="number" placeholder="Valor de C">
+    <button>Calcular</button>
+  </form>
+
+  <div id="result"></div>
+
+    <script>
+      function onSubmit(event) {
+      event.preventDefault()
+
+      let a = parseFloat(field1.value)
+      let b = parseFloat(field2.value)
+      let c = parseFloat(field3.value)
+
+      let delta = b * b - 4 * a * c //  cálculo Delta
+      let x1 = (-b + Math.sqrt(delta)) / (2 * a) // cálculo primeira raiz
+      let x2 = (-b - Math.sqrt(delta)) / (2 * a) // cálculo segunda raiz
+
+      result.innerHTML = `
+        <ul>
+          <li>Entradas: <b>${a}</b>, <b>${b}</b> e <b>${c}</b>.</li>
+          <li> o valor de delta é: ${delta} </li>
+        <li>X1: <b>${x1}</b>.</li>
+        <li>X2: <b>${x2}</b>.</li>
+      </ul>
+    `
+   }
+
+      form.addEventListener('submit', onSubmit)
+
+     </script>  
+   </body>
+  </center>
+</html>
